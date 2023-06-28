@@ -17,8 +17,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <section className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-4 mt-8 mb-4">
-        <div className="h-[30rem] rounded-3xl p-10 flex flex-col gap-16 bg-[url('/gradient-bg.jpg')] bg-cover">
+      <section className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-4 my-8">
+        <div className="h-[34rem] lg:h-[24rem] rounded-3xl p-10 flex flex-col gap-12 bg-[url('/gradient-bg.jpg')] bg-cover">
           <h1 className="text-4xl font-semibold">
             Hello, I'm a Product Manager with 7 years of experience.
           </h1>
@@ -27,10 +27,10 @@ export default function Home() {
             creating user-centric, delightfull, and human experiences.
           </p>
           <div className="flex flex-col lg:flex-row items-center gap-4 justify-self-end">
-            <button className="bg-black text-white font-medium py-3 px-12 rounded-full w-60 lg:w-auto">
+            <button className="bg-black  text-white font-medium py-3 px-12 rounded-full h-100 lg:w-auto ">
               Contact me
             </button>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 mb-8 lg:mb-0">
               <SocialButton bgColor="dribble">
                 <Dribble />
               </SocialButton>
@@ -46,7 +46,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="h-[30rem] rounded-3xl p-8 bg-[url('/profile.jpg')] bg-cover bg-center"></div>
+        <div className="h-[32rem] lg:h-[24rem] rounded-3xl p-8 bg-[url('/profile.jpg')] bg-cover bg-center"></div>
       </section>
 
       <section
