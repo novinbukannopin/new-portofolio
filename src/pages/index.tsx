@@ -1,11 +1,12 @@
 import Head from "next/head";
-import Navbar from "../../components/Navbar";
+import Navbar from "../../components/NavbarComponent";
 import SocialButton from "../../components/SocialButton";
 import Dribble from "../../public/dribbble.svg";
 import Instagram from "../../public/instagram.svg";
 import Twitter from "../../public/twitter.svg";
 import Linkedin from "../../public/linkedin.svg";
 import ProjectPreview from "../../components/ProjectPreview";
+import NavbarComponent from "../../components/NavbarComponent";
 
 export default function Home() {
   return (
@@ -16,8 +17,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar />
-      <section className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-4 my-8 mt-[100px]">
+      <NavbarComponent />
+      <section className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-4 my-8 ">
         <div className="h-[34rem] lg:h-[24rem] rounded-3xl p-10 flex flex-col gap-12 bg-[url('/gradient-bg.jpg')] bg-cover">
           <h1 className="text-4xl font-semibold">
             Hello, I'm a Product Manager with 7 years of experience.
