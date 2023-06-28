@@ -20,10 +20,10 @@ export default function Home() {
       <NavbarComponent />
       <section className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-4 my-8 ">
         <div className="h-[34rem] lg:h-[24rem] rounded-3xl p-10 flex flex-col gap-12 bg-[url('/gradient-bg.jpg')] bg-cover">
-          <h1 className="text-4xl font-semibold">
+          <h1 className="text-4xl font-semibold dark:text-black">
             Hello, I'm a Product Manager with 7 years of experience.
           </h1>
-          <p className="flex-1">
+          <p className="flex-1 dark:text-black">
             I care a lot about using design for positive impact anda enjoy
             creating user-centric, delightfull, and human experiences.
           </p>

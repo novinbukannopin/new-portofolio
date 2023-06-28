@@ -1,11 +1,12 @@
 "use client";
-import { Avatar, Dropdown, Flowbite, Navbar } from "flowbite-react";
+import { Flowbite, Navbar } from "flowbite-react";
 import type { CustomFlowbiteTheme } from "flowbite-react";
+import DarkModeBtn from "./DarkModeButton";
 
 const customTheme: CustomFlowbiteTheme = {
   navbar: {
     root: {
-      base: "bg-white px-2 py-2.5 dark:border-gray-700 dark:bg-gray-800 sm:px-4",
+      base: "bg-pink px-2 py-2.5 dark:border-gray-700 dark:bg-[#1C1B22] bg-white sm:px-4",
       rounded: {
         on: "rounded",
         off: "",
@@ -34,7 +35,7 @@ const customTheme: CustomFlowbiteTheme = {
       },
     },
     link: {
-      base: "block py-2 pr-4 pl-3 md:p-0 text-black",
+      base: "block py-2 pr-4 pl-3 md:p-0 text-black dark:text-white",
       active: {
         on: "bg-blue-700 text-white dark:text-white md:bg-transparent md:text-black-700",
         off: "border-b border-gray-100 text-black hover:text-pink-700 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:border-0 md:hover:bg-transparent md:hover:text-pink-700 md:dark:hover:bg-transparent md:dark:hover:text-white",
@@ -56,11 +57,14 @@ export default function NavbarComponent() {
     <Flowbite theme={{ theme: customTheme }}>
       <Navbar rounded className="sticky top-0 z-50 py-8">
         <Navbar.Brand>
-          <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
+          <span className="self-center whitespace-nowrap text-xl font-semibold ">
             Novin
           </span>
         </Navbar.Brand>
-        <div className="flex">
+        <div className="flex items-center">
+          <div className="md:hidden lg:hidden mr-2">
+            <DarkModeBtn />
+          </div>
           <Navbar.Toggle />
         </div>
         <Navbar.Collapse>
@@ -75,6 +79,9 @@ export default function NavbarComponent() {
           </Navbar.Link>
           <Navbar.Link className="pl-0" href="#">
             About
+          </Navbar.Link>
+          <Navbar.Link className="pl-0" href="#">
+            <DarkModeBtn />
           </Navbar.Link>
         </Navbar.Collapse>
       </Navbar>
