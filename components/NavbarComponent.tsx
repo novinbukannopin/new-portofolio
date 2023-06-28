@@ -1,27 +1,83 @@
 "use client";
+import { Avatar, Dropdown, Flowbite, Navbar } from "flowbite-react";
+import type { CustomFlowbiteTheme } from "flowbite-react";
 
-import { Avatar, Dropdown, Navbar } from "flowbite-react";
+const customTheme: CustomFlowbiteTheme = {
+  navbar: {
+    root: {
+      base: "bg-white px-2 py-2.5 dark:border-gray-700 dark:bg-gray-800 sm:px-4",
+      rounded: {
+        on: "rounded",
+        off: "",
+      },
+      bordered: {
+        on: "border",
+        off: "",
+      },
+      inner: {
+        base: "mx-auto flex flex-wrap items-center justify-between",
+        fluid: {
+          on: "",
+          off: "container",
+        },
+      },
+    },
+    brand: {
+      base: "flex items-center ",
+    },
+    collapse: {
+      base: "w-full md:block md:w-auto",
+      list: "mt-4 flex flex-col md:mt-0 md:flex-row md:space-x-8 md:text-sm md:font-medium",
+      hidden: {
+        on: "hidden",
+        off: "",
+      },
+    },
+    link: {
+      base: "block py-2 pr-4 pl-3 md:p-0 text-black",
+      active: {
+        on: "bg-blue-700 text-white dark:text-white md:bg-transparent md:text-black-700",
+        off: "border-b border-gray-100 text-black hover:text-pink-700 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:border-0 md:hover:bg-transparent md:hover:text-pink-700 md:dark:hover:bg-transparent md:dark:hover:text-white",
+      },
+      disabled: {
+        on: "text-gray-400 hover:cursor-not-allowed dark:text-gray-600",
+        off: "",
+      },
+    },
+    toggle: {
+      base: "inline-flex items-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 md:hidden",
+      icon: "h-6 w-6 shrink-0",
+    },
+  },
+};
 
 export default function NavbarComponent() {
   return (
-    <Navbar fluid rounded className="sticky top-0 z-50 pt-8">
-      <Navbar.Brand href="https://flowbite-react.com">
-        <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-          Novin
-        </span>
-      </Navbar.Brand>
-      <div className="flex ">
-        <Navbar.Toggle />
-      </div>
-      <Navbar.Collapse>
-        <Navbar.Link active href="#">
-          <p>Home</p>
-        </Navbar.Link>
-        <Navbar.Link href="#">About</Navbar.Link>
-        <Navbar.Link href="#">Services</Navbar.Link>
-        <Navbar.Link href="#">Pricing</Navbar.Link>
-        <Navbar.Link href="#">Contact</Navbar.Link>
-      </Navbar.Collapse>
-    </Navbar>
+    <Flowbite theme={{ theme: customTheme }}>
+      <Navbar rounded className="sticky top-0 z-50 py-8">
+        <Navbar.Brand>
+          <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
+            Novin
+          </span>
+        </Navbar.Brand>
+        <div className="flex">
+          <Navbar.Toggle />
+        </div>
+        <Navbar.Collapse>
+          <Navbar.Link className="pl-0" href="#">
+            Home
+          </Navbar.Link>
+          <Navbar.Link className="pl-0" href="#project">
+            Project
+          </Navbar.Link>
+          <Navbar.Link className="pl-0" href="#">
+            Blog
+          </Navbar.Link>
+          <Navbar.Link className="pl-0" href="#">
+            About
+          </Navbar.Link>
+        </Navbar.Collapse>
+      </Navbar>
+    </Flowbite>
   );
 }
