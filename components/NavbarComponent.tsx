@@ -6,7 +6,7 @@ import DarkModeBtn from "./DarkModeButton";
 const customTheme: CustomFlowbiteTheme = {
   navbar: {
     root: {
-      base: "bg-pink px-2 py-2.5 dark:border-gray-700 dark:bg-[#1C1B22] bg-white sm:px-4",
+      base: "py-2.5 dark:border-gray-700 dark:bg-slate-800 bg-white ",
       rounded: {
         on: "rounded",
         off: "",
@@ -55,14 +55,14 @@ const customTheme: CustomFlowbiteTheme = {
 export default function NavbarComponent() {
   return (
     <Flowbite theme={{ theme: customTheme }}>
-      <Navbar rounded className="sticky top-0 z-50 py-8">
+      <Navbar rounded-b className="sticky top-0 z-50 py-8 mx-auto">
         <Navbar.Brand>
           <span className="self-center whitespace-nowrap text-xl font-semibold ">
             Novin
           </span>
         </Navbar.Brand>
         <div className="flex items-center">
-          <div className="md:hidden lg:hidden mr-2">
+          <div className="sm:visible md:hidden lg:hidden mr-3 cursor-pointer">
             <DarkModeBtn />
           </div>
           <Navbar.Toggle />
@@ -74,13 +74,13 @@ export default function NavbarComponent() {
           <Navbar.Link className="pl-0" href="#project">
             Project
           </Navbar.Link>
-          <Navbar.Link className="pl-0" href="#">
+          <Navbar.Link className="pl-0" href="#blog">
             Blog
           </Navbar.Link>
           <Navbar.Link className="pl-0" href="#">
             About
           </Navbar.Link>
-          <Navbar.Link className="pl-0" href="#">
+          <Navbar.Link className="pl-0 cursor-pointer">
             <DarkModeBtn />
           </Navbar.Link>
         </Navbar.Collapse>

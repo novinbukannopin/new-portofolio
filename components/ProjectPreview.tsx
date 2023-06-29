@@ -19,9 +19,8 @@ const ProjectPreview: React.FC<Props> = ({
 }) => {
   return (
     <motion.div
-      className={`mt-[110px] lg:mt-[100px] h-[30rem] rounded-xl overflow-hidden ${
-        dark ? "dark" : ""
-      }`}
+      // mt-[40px] lg:mt-[30px]
+      className={` h-[30rem] rounded-xl overflow-hidden ${dark ? "dark" : ""}`}
       style={{ background: `${bgColor}` }}
       initial="initial"
       whileInView="animate"

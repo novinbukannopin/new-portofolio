@@ -1,12 +1,9 @@
 import Head from "next/head";
-import Navbar from "../../components/NavbarComponent";
-import SocialButton from "../../components/SocialButton";
-import Dribble from "../../public/dribbble.svg";
-import Instagram from "../../public/instagram.svg";
-import Twitter from "../../public/twitter.svg";
-import Linkedin from "../../public/linkedin.svg";
-import ProjectPreview from "../../components/ProjectPreview";
+
 import NavbarComponent from "../../components/NavbarComponent";
+import HomePage from "./Home";
+import ProjectPage from "./ProjectPage";
+import BlogPage from "./BlogPage";
 
 export default function Home() {
   return (
@@ -18,75 +15,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <NavbarComponent />
-      <section className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-4 my-8 ">
-        <div className="h-[34rem] lg:h-[24rem] rounded-3xl p-10 flex flex-col gap-12 bg-[url('/gradient-bg.jpg')] bg-cover">
-          <h1 className="text-4xl font-semibold dark:text-black">
-            Hello, I'm a Product Manager with 7 years of experience.
-          </h1>
-          <p className="flex-1 dark:text-black">
-            I care a lot about using design for positive impact anda enjoy
-            creating user-centric, delightfull, and human experiences.
-          </p>
-          <div className="flex flex-col lg:flex-row items-center gap-4 justify-self-end">
-            <button className="bg-black  text-white font-medium py-3 px-12 rounded-full w-full lg:w-auto ">
-              Contact me
-            </button>
-            <div className="flex items-center gap-4  lg:mb-0">
-              <SocialButton bgColor="dribble">
-                <Dribble />
-              </SocialButton>
-              <SocialButton bgColor="instagram">
-                <Instagram />
-              </SocialButton>
-              <SocialButton bgColor="twitter">
-                <Twitter />
-              </SocialButton>
-              <SocialButton bgColor="linkedin">
-                <Linkedin />
-              </SocialButton>
-            </div>
-          </div>
-        </div>
-        <div className="h-[32rem] lg:h-[24rem] rounded-3xl p-8 bg-[url('/profile.jpg')] bg-cover bg-center"></div>
-      </section>
-
-      <section
-        className="grid grid-cols-1 lg:grid-cols-2 gap-4 my-4"
-        id="project"
-      >
-        <ProjectPreview
-          name="Flip App"
-          description="Next Gen Social Media"
-          imageUrl="/project-1.png"
-          bgColor="#685cdd"
-          dark
-        />
-        <ProjectPreview
-          name="Flip App"
-          description="Next Gen Social Media"
-          imageUrl="/project-2.png"
-          bgColor="#313442"
-          dark
-        />
-        <ProjectPreview
-          name="Flip App"
-          description="Next Gen Social Media"
-          imageUrl="/project-3.png"
-        />
-        <ProjectPreview
-          name="Flip App"
-          description="Next Gen Social Media"
-          bgColor="#4e4e56"
-          dark
-        />
-        <ProjectPreview
-          name="Flip App"
-          description="Next Gen Social Media"
-          imageUrl="/project-2.png"
-          bgColor="#171717"
-          dark
-        />
-      </section>
+      <HomePage />
+      <ProjectPage />
+      <BlogPage />
     </>
   );
 }

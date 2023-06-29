@@ -21,7 +21,7 @@ const DarkModeBtn = () => {
         <svg
           className="w-6 h-6 text-gray-800 dark:text-white animate-spin"
           aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
+          // xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 20 20"
           onClick={() => setTheme("light")}
@@ -38,7 +38,7 @@ const DarkModeBtn = () => {
         <svg
           className="w-6 h-6 text-gray-800 dark:text-white animate-spin"
           aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
+          // xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 18 20"
           onClick={() => setTheme("dark")}
